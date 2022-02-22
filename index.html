@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benefits analisis app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="app">
+  <header class="appHeader">
+    <h1 class="appHeader__header">Benefits analisis app</h1>
+    <p class="paragraph appHeader__description">Thanks to this app you will make a good decision</p>
+  </header>
+  <main class="benefitsApp">
+    <section class="analysis benefitsApp__analysis">
+      <form id="analisisForm" class="analisis__submitProblem">
+          <div class="inputContainer">
+            <label class="inputContainer__label" for="decision">Write plus/minus of your decision</label>
+            <input class="inputContainer__input" type="text" id="decision">
+          </div>
+          <div class="inputContainer">
+            <label class="inputContainer__label" for="typeSelect">Is it plus or minus:</label>
+            <select class="inputContainer__input" name="type" id="typeSelect">
+              <option value="plus">Plus</option>
+              <option value="minus">Minus</option>
+            </select>
+          </div>
+          <div class="inputContainer">
+            <label class="inputContainer__label" for="importanceSelect">Importance scale:</label>
+            <select class="inputContainer__input" name="type" id="importanceSelect">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+        <button class="btn">Add</button>
+      </form>
+    </section>
+    
+    <section class="benefitsApp__boxes">
+      <div class="box benefitsApp__plusBox">
+        <h2 class="benefitsApp__header">Pluses</h2>
+        <ul class="benefitsApp__list" id="plusesList">
+        </ul>
+      </div>
+      <div class="box benefitsApp__minusBox">
+        <h2 class="benefitsApp__header">Minuses</h2>
+        <ul class="benefitsApp__list" id="minusesList">
+        </ul>
+      </div>
+    </section>
+    <p id="finalDecision" class="paragraph benefitsApp__finalDecision"></p>
+  </main>
+</body>
+<script src="./index.js" type="module"></script>
+</html>
