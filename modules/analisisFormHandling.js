@@ -1,5 +1,8 @@
 const analisisForm = document.querySelector("#analisisForm");
 
+let plusesSum = 0;
+let minusesSum = 0;
+
 export default function analisisFormHandling() {
   analisisForm.addEventListener("submit", e => {
     e.preventDefault();
@@ -9,6 +12,11 @@ export default function analisisFormHandling() {
       document.querySelector("#importanceSelect").value
     );
 
-    console.log(decisionArgument, typeSelect, importanceSelect);
+    if (typeSelect === "plus") {
+      plusesSum += importanceSelect;
+    } else {
+      minusesSum += importanceSelect;
+    }
+    console.log(plusesSum, minusesSum);
   });
 }
