@@ -1,4 +1,5 @@
 const analisisForm = document.querySelector("#analisisForm");
+import showDecision from "./showDecision.js";
 
 let plusesSum = 0;
 let minusesSum = 0;
@@ -17,6 +18,6 @@ export default function analisisFormHandling() {
     } else {
       minusesSum += importanceSelect;
     }
-    console.log(plusesSum, minusesSum);
+    showDecision(plusesSum, minusesSum);
   });
 }
